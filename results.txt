@@ -1,0 +1,42 @@
+sashank@sashank-Latitude-3540:~/Desktop/Mental_AI_Health_Companion$ /home/sashank/anaconda3/bin/python /home/sashank/Desktop/Mental_AI_Health_Companion/models/evaluate_model.py
+2025-03-07 01:19:17.314947: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-03-07 01:19:17.374850: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2025-03-07 01:19:17.374911: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-03-07 01:19:17.376342: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-03-07 01:19:17.384394: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-03-07 01:19:18.602286: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+4/4 [==============================] - 0s 2ms/step
+Evaluation for models/emotion_model_english.h5:
+Accuracy: 0.8833
+
+Classification Report:
+              precision    recall  f1-score   support
+
+       Anger       0.95      0.86      0.90        22
+        Fear       0.73      0.92      0.81        24
+       Happy       0.94      0.97      0.95        31
+     Neutral       0.73      0.73      0.73        11
+         Sad       1.00      0.84      0.92        32
+
+    accuracy                           0.88       120
+   macro avg       0.87      0.86      0.86       120
+weighted avg       0.90      0.88      0.89       120
+
+3/3 [==============================] - 0s 2ms/step
+Evaluation for models/emotion_model_kannada.h5:
+Accuracy: 0.4362
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           1       0.56      0.82      0.67        17
+           2       0.33      0.31      0.32        13
+           3       0.36      0.31      0.33        13
+           4       0.45      0.31      0.37        16
+           5       0.23      0.36      0.28        14
+           6       0.69      0.43      0.53        21
+
+    accuracy                           0.44        94
+   macro avg       0.44      0.42      0.42        94
+weighted avg       0.46      0.44      0.43        94
